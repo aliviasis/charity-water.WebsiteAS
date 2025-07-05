@@ -100,7 +100,8 @@
       min-height: 100vh; /* 100% of the viewport height */
       height: 100vh;
       /* Show the image at full opacity and move it so people are on the left */
-      background: url('https://cdn2.dropmarkusercontent.com/52043/8f21aa9a3ef23f52413e21fe206e58d508527411b8292bb00bb25e40440fa0fe/preview/Uganda_2021_CG-6883.jpg?Expires=1751595304&Signature=jKPEtPfTuOfTtZICjO-fU9wD2x~Csr-wh9E95pGUgFl4pT6KIXyR9~Y02vHlAyMLKkLRvWxgmhfBQYIe3eccaPexCpS8q54Z-vROgVIGcT7xJ560RGngjlIkZDIOPjGVgOJl7cYu-NOVBH3DgeESgkYrNY1GI0bVkz-RjZCsiUBNwWYEKbbiyDuH58l0khMQqtz6PX0DyD77hOMabwbRY-EI06MefRZcx4HHdXn8nHN2XLpsqP~z2mTd37S8kWhig3ph~kljutB~cL5ktBntImjHX2sIO5zzr9t~mOjnOOnJT24adYBX7AvHZCVAqN6VeZ9PGd6WtEbevIRG4TYQ3A__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ') no-repeat left -60px top/cover;
+      background: url('https://cdn2.dropmarkusercontent.com/52043/8f21aa9a3ef23f52413e21fe206e58d508527411b8292bb00bb25e40440fa0fe/preview/Uganda_2021_CG-6883.jpg?Expires=1751595304&Signature=jKPEtPfTuOfTtZICjO-fU9wD2x~Csr-wh9E95pGUgFl4pT6KIXyR9~Y02vHlAyMLKkLRvWxgmhfBQYIe3eccaPexCpS8q54Z-vROgVIGcT7xJ560RGngjlIkZDIOPjGVgOJl7cYu-NOVBH3DgeESgkYrNY1GI0bVkz-RjZCsiUBNwWYEKbbiyDuH58l0khMQqtz6PX0DyD77hOMabwbRY-EI06MefRZcx4HHdXn8nHN2XLpsqP~z2mTd37S8kWhig3ph~kljutB~cL5ktBntImjHX2sIO5zzr9t~mOjnOOnJT24adYBX7AvHZCVAqN6VeZ9PGd6WtEbevIRG4TYQ3A__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ') no-repeat left -300px top/cover;
+      background-size: 120% 128%;
       color: #000;
       position: relative;
     }
@@ -113,20 +114,21 @@
     .hero-content {
       /* Make the box narrower and smaller, center text vertically */
       position: relative;
-      max-width: 320px;
-      min-height: 320px;
+      max-width: 440px;
+      min-height: 745px;
       background: rgba(255,255,255,0.9);
-      padding: 1.2rem 1.2rem 1.2rem 1.2rem;
-      margin: 2rem 1rem 1rem 1rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+      padding: 2.2rem 2.2rem 2.2rem 2.2rem;
+      margin: 2.5rem 2rem 2rem 1.5rem;
+      border-radius: 20px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.20);
       text-align: center;
       z-index: 2;
       height: auto;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
+      padding-top: 3.5rem;
     }
 
     .hero-content > * {
@@ -136,36 +138,53 @@
     .hero-content h1 {
       margin-top: 0;
       font-family: 'Georgia', serif;
-      font-size: 1.5rem;
-      margin-bottom: 0.8rem;
+      font-size: 2.1rem;
+      margin-bottom: 1.2rem;
     }
 
     .hero-content p {
-      margin-bottom: 1rem;
-      font-size: 0.85rem;
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
     }
 
     .donation-buttons {
       display: flex;
       justify-content: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
+      gap: 0;
+      margin-bottom: 1.5rem;
+      width: 100%;
     }
 
     .donation-buttons button {
-      padding: 0.4rem 0.8rem;
-      font-weight: 600;
+      flex: 1 1 0;
+      padding: 0.6rem 0;
+      font-weight: 700;
       border: 2px solid #333;
       background-color: #fff;
       cursor: pointer;
-      border-radius: 4px;
+      border-radius: 0;
       transition: all 0.2s ease-in-out;
-      font-size: 0.8rem;
+      font-size: 1.2rem;
+      margin: 0;
+      border-right: none;
+    }
+    .donation-buttons button:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+    .donation-buttons button:last-child {
+      border-radius: 0 8px 8px 0;
+      border-right: 2px solid #333;
+    }
     }
 
     .donation-buttons button:hover {
       background-color: #fdd835;
       border-color: #fdd835;
+    }
+    .donation-buttons button.selected {
+      background-color: #fdd835;
+      border-color: #fdd835;
+      color: #222;
     }
 
     .donation-type {
@@ -174,7 +193,8 @@
       gap: 2rem;
       font-weight: 600;
       margin: 0.8rem 0;
-      font-size: 0.8rem;
+      font-size: 1.00rem;
+      text-transform: uppercase;
     }
 
     .cta {
@@ -226,9 +246,9 @@
       <h1>Clean water creates clearer futures.</h1>
       <p>With 100% of donations funding community projects, just $40 brings one person clean water and endless possibilities.</p>
       <div class="donation-buttons">
-        <button>$10</button>
-        <button>$20</button>
-        <button>$40</button>
+        <button type="button">$10</button>
+        <button type="button">$20</button>
+        <button type="button">$40</button>
       </div>
       <div class="donation-type">
         <span>Give Once</span>
@@ -238,5 +258,17 @@
       <button class="cta">JOIN TODAY</button>
     </div>
   </section>
+  <script>
+    // Donation button selection logic
+    document.addEventListener('DOMContentLoaded', function() {
+      const buttons = document.querySelectorAll('.donation-buttons button');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          buttons.forEach(b => b.classList.remove('selected'));
+          this.classList.add('selected');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
